@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use('/api', appRoute);
 
+app.get('/',(req,res)=>{
+    res.sendFile('index.html',{root:__dirname})
+});
 
 
 http.createServer(app).listen(process.env.PORT||3000);
