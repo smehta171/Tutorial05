@@ -7,7 +7,7 @@ var db = mongojs("mongodb+srv://mlab_user:password@cluster0.7mq9h.mongodb.net/Sc
 
 //reading data
 router.get('/getting', (req, res) => {
-    db.student.find({}, (err, msg) => {
+    db.Departments.find({}, (err, msg) => {
         if (!err) {
             res.status(200).json({
                 message: msg
